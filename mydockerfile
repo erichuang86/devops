@@ -1,0 +1,8 @@
+# Version: 0.0.1
+FROM centos
+MAINTAINER Eric Huang "hzyyollow@163.com"
+RUN yum install epel-release -y
+RUN yum install nginx -y
+RUN echo 'Hi, I am in your container' \
+        > /usr/share/nginx/html/index.html
+EXPOSE 80
